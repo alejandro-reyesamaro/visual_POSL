@@ -33,7 +33,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Benchmark\cost_strategy\IRelativeCostStrategy.cs" />
     <Compile Include="Benchmark\cost_strategy\ICostStrategy.cs" />
@@ -52,6 +51,10 @@
     <Compile Include="Data\Domain.cs" />
     <Compile Include="Data\UniformDomain.cs" />
     <Compile Include="Data\Solution.cs" />
+    <Compile Include="Benchmark\showing_strategy\GolfersDefaultShowStrategy.cs" />
+    <Compile Include="Benchmark\showing_strategy\IShowStrategy.cs" />
+    <Compile Include="Benchmark\Golfers.cs" />
+    <Compile Include="Benchmark\Benchmark.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -59,5 +62,6 @@
     <Folder Include="Benchmark\cost_strategy\" />
     <Folder Include="Tools\" />
     <Folder Include="Data\" />
+    <Folder Include="Benchmark\showing_strategy\" />
   </ItemGroup>
 </Project>

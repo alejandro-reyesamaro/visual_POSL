@@ -10,7 +10,7 @@ using System;
 namespace POSL.Data
 {
 	/*!
-	 * \class ComputationData computation_data.h
+	 * \class ComputationData
 	 * \brief (Abstract) Class to represent all types of I/O in POSL
 	 */
 	public abstract class ComputationData

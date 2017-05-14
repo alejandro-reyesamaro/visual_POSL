@@ -10,7 +10,7 @@ using System;
 namespace POSL.Benchmark
 {
 	/*!
-	 * \class Reseteable reseteable.h
+	 * \class IReseteable
 	 * \brief Interface to represent a relative solution cost strategy
 	 */
 	public interface IReseteable

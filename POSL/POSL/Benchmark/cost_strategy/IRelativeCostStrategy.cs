@@ -11,7 +11,7 @@ using POSL.Tools;
 namespace POSL.Benchmark
 {
 	/*!
-	* \class RelativeCostStrategy relative_cost_strategy.h
+	* \class IRelativeCostStrategy
 	* \brief Interface to represent a relative solution cost strategy
 	 */
 	public interface IRelativeCostStrategy

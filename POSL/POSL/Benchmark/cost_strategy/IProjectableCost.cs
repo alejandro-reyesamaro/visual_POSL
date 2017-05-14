@@ -10,7 +10,7 @@ using System;
 namespace POSL.Benchmark
 {
 	/*!
-	 * \class ProjectableCost projectable_cost.h
+	 * \class IProjectableCost
 	 * \brief Interface to represent the a class that can projec the cost of a variable
 	 */
 	public interface IProjectableCost

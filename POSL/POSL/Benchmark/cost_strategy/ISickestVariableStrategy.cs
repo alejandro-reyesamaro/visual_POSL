@@ -10,7 +10,7 @@ using System;
 namespace POSL.Benchmark
 {
 	/*!
-	 * \class SickestVariableStrategy sickest_variable_strategy.h
+	 * \class ISickestVariableStrategy
 	 * \brief Interface to represent a strategy to compute the variable with the highest projected cost
 	 */
 	public interface ISickestVariableStrategy

@@ -10,7 +10,7 @@ using System;
 namespace POSL.Benchmark
 {
 	/*!
-	 * \class SolutionCostStrategy solution_cost_strategy.h
+	 * \class ICostStrategy
 	 * \brief Interface to represent an absolute solution cost strategy
 	 */
 	public interface ICostStrategy
