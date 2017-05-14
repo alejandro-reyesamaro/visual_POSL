@@ -38,21 +38,17 @@ namespace POSL.Benchmark
 		public Domain Variable_Domain{ get { return domain; } }
 
 		// ----- METHODS
-		public int solutionCost(Solution sol)
+		public int relativeSolutionCost(Solution solution)
 		{
-			return solutionCost(sol.GetConfByRef);
+			return relative_cost_strategy.relativeSolutionCost(solution);
 		}
-		public int relativeSolutionCost(int[] configuration)
+		public int relativeSolutionCost(Solution new_solution, T_Changes changes)
 		{
-			return relative_cost_strategy.relativeSolutionCost(configuration);
+			return relative_cost_strategy.relativeSolutionCost(new_solution, changes);
 		}
-		public int relativeSolutionCost(int[] new_config, T_Changes changes)
+		public int solutionCost(Solution solution)
 		{
-			return relative_cost_strategy.relativeSolutionCost(new_config, changes);
-		}
-		public int solutionCost(int[] configuration)
-		{
-			return cost_strategy.solutionCost(configuration);
+			return cost_strategy.solutionCost(solution);
 		}
 		public int currentCost()
 		{
@@ -103,15 +99,15 @@ namespace POSL.Benchmark
 
 
 		// ----- PROTECTED
-		protected void UpdateSolution(int[] config)
+		protected void UpdateSolution(Solution solution)
 		{    
-			relative_cost_strategy.updateConfiguration(config);
-			Array.Copy (config, configuration, configuration.Length);
+			relative_cost_strategy.updateConfiguration(solution);
+			configuration = solution.GetConfByCopy;
 		}
-		protected void InitializeCostData(int[] config)
+		protected void InitializeCostData(Solution solution)
 		{
-			relative_cost_strategy.initializeCostData(config, solutionCost(config));
-			Array.Copy (config, configuration, configuration.Length);
+			relative_cost_strategy.initializeCostData(solution, solutionCost(solution));
+			configuration = solution.GetConfByCopy;
 		}
 		// ----- 
 	}

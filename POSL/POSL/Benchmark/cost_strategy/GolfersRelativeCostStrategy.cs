@@ -1,5 +1,6 @@
 using System;
 using POSL.Tools;
+using POSL.Data;
 using System.Collections.Generic;
 
 namespace POSL.Benchmark
@@ -36,10 +37,9 @@ namespace POSL.Benchmark
 		//! (Property) From <RelativeCostStrategy>
 		public int currentCost() { return current_cost; }
 
-		public void initializeCostData(int[] _configuration, int _initial_cost)
+		public void initializeCostData(Solution solution, int _initial_cost)
 		{
-			//copy(_configuration.begin(), _configuration.end(), configuration.begin());
-			Array.Copy(_configuration, configuration, configuration.Length);
+			configuration = solution.GetConfByCopy;
 			int start_tournament, end_tournament;
 			current_cost = 0;
 			cc_occurrences.clear();
@@ -61,7 +61,7 @@ namespace POSL.Benchmark
 			current_cost = _initial_cost;
 		}
 
-		public int relative_cost(int[] new_config, T_Changes change, bool updating)
+		public int relative_cost(Solution new_solution, T_Changes change, bool updating)
 		{
 			int cost = 0;
 			int pos, new_value, w, g, j;
@@ -84,7 +84,7 @@ namespace POSL.Benchmark
 					{
 						current_player_at_pos = configuration[pos];
 						partner_current_group = configuration[j];
-						partner_new_group = new_config[j];
+						partner_new_group = new_solution[j];
 
 						cost += cc_occurrences.remove_connection(current_player_at_pos, partner_current_group, updating);
 						cost += cc_occurrences.add_connection(new_value, partner_new_group, updating);
@@ -94,25 +94,25 @@ namespace POSL.Benchmark
 			return cost;
 		}
 
-		public void updateConfiguration(int[] new_config)
+		public void updateConfiguration(Solution new_solution)
 		{
-			T_Changes changes = PoslTools.getChanges(configuration, new_config);
+			T_Changes changes = Solution.getChanges(configuration, new_solution);
 			if(changes.Dimension > 0)
 			{
-				current_cost += relative_cost(new_config, changes, true);
-				Array.Copy(new_config, configuration, configuration.Length);
+				current_cost += relative_cost(new_solution, changes, true);
+				configuration = new_solution.GetConfByCopy;
 			}
 		}
 
-		public int relativeSolutionCost(int[]_configuration)
+		public int relativeSolutionCost(Solution new_solution)
 		{
-			T_Changes changes = PoslTools.getChanges(configuration, _configuration);
-			return relativeSolutionCost(_configuration, changes);
+			T_Changes changes = Solution.getChanges(configuration, new_solution);
+			return relativeSolutionCost(new_solution, changes);
 		}
 
-		public int relativeSolutionCost(int[]_configuration, T_Changes _changes)
+		public int relativeSolutionCost(Solution new_solution, T_Changes _changes)
 		{
-			return current_cost + relative_cost(_configuration, _changes, false);
+			return current_cost + relative_cost(new_solution, _changes, false);
 		}
 
 		public int costOnVariable(int variable_index)

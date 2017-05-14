@@ -91,23 +91,6 @@ namespace POSL.Tools
 			Array.Sort(v);
 		}
 
-		public static T_Changes getChanges(int[] config_before, int[] config_after)
-		{
-			if (config_after.Length != config_before.Length)
-				throw new InvalidOperationException ("(POSL_Exception) sizes mismatches (PoslTools.getChanges)");
-			List<int> l_new_values = new List<int> (config_after.Length);
-			List<int> l_new_positions = new List<int> (config_after.Length);
-
-			for (int i = 0; i < config_before.Length; i++) {
-				if (config_before [i] != config_after [i]){
-					l_new_values.Add (config_after [i]);
-					l_new_positions.Add (i);
-				}
-			}
-
-			return new T_Changes (l_new_positions.ToArray (), l_new_values.ToArray());
-		}
-
 		public static float norm1(int[] v1, int[] v2)
 		{
 			if(v1.Length != v2.Length)

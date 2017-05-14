@@ -1,5 +1,6 @@
 using System;
 using POSL.Tools;
+using POSL.Data;
 
 /**
  * POSL
@@ -18,17 +19,17 @@ namespace POSL.Benchmark
 	{
 		//! Computes the cost of a configuration relative to the current configuration.
 		/*!
-		\param _configuration A configuration (solution).
+		\param solution A configuration (solution).
 		\return Cost of the given configuration.
 		*/
-		int relativeSolutionCost(int[] _configuration);
+		int relativeSolutionCost(Solution solution);
 
 		//! Initialize the information related to the cost.
 		/*!
 		\param _configuration A configuration (solution).
 		\param _initial_cost The initial cost of the configuration.
 		*/
-		void initializeCostData(int[] _configuration, int _initial_cost);
+		void initializeCostData(Solution solution, int _initial_cost);
 
 		//! Computes the cost of a configuration relative to the current configuration.
 		/*!
@@ -36,13 +37,13 @@ namespace POSL.Benchmark
 		\param _change The performed changes w.r.t the current configuration
 		\return Cost of the given configuration.
 		*/
-		int relativeSolutionCost(int[] _configuration, T_Changes _change);
+		int relativeSolutionCost(Solution solution, T_Changes _change);
 
 		//! Updates the current configuration.
 		/*!
 		\param new_config A configuration (solution).
 		*/
-		void updateConfiguration(int[] new_config);
+		void updateConfiguration(Solution new_solution);
 
 		//! Returns the current cost.
 		/*!

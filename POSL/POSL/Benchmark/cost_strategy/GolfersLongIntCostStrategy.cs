@@ -1,35 +1,56 @@
 using System;
 using POSL.Tools;
+using POSL.Data;
 
+/**
+ * POSL
+ *
+ * \brief Class to represent the absolute cost stratategy of Social Golgers Problem
+ * \author Alejandro Reyes
+ * \date 2017-05-14
+ */
 namespace POSL.Benchmark
 {
+	/*!
+	 * \class GolfersLongIntCostStrategy
+	 * \brief Class to represent the absolute cost stratategy of Social Golgers Problem
+	 */
 	public class GolfersLongIntCostStrategy : ICostStrategy
 	{
-		//! [number of groups],[players per group],[weeks to play]
-		private int groups;
-		private int players;
-		private int weeks;
-		//! Variable to store whether a player is playing more than once ina week
-		private LongInt alldiff;
-		//! Auxiliar variable to store a new partner
-		//private LongInt new_partner;
-		//! Auxiliar variable to store a global partnership of a player
-		private LongInt global_partnership;
-		//! Variable to store the partners of each player (globally)
-		private LongInt[] global_partners;
-		//! Variable to store the partners of each player (in a group)
-		private LongInt[] group_partners;
+		private int groups; /*!< number of groups */
+		private int players; /*!< players per group */
+		private int weeks; /*!< weeks to play */
+		private LongInt alldiff; /*!< Variable to store whether a player is playing more than once ina week */
+		//private LongInt new_partner; /*!< Auxiliar variable to store a new partner */
+		private LongInt global_partnership; /*!< Auxiliar variable to store a global partnership of a player */
+		private LongInt[] global_partners; /*!< Variable to store the partners of each player (globally) */
+		private LongInt[] group_partners; /*!< Variable to store the partners of each player (in a group) */
 
-		private int TP { get{ return players * groups; } }     		/* total players */
-		private int TG { get{ return groups * weeks; } }      		/* total groups  */
-		private int TL { get{ return players * groups / 32 + 1; } } // how long must be the LongInt
+		/*! total players */
+		private int TP { get{ return players * groups; } } 
+		/*! total groups  */
+		private int TG { get{ return groups * weeks; } }     
+		//! how long must be the LongInt
+		private int TL { get{ return players * groups / 32 + 1; } } 
 
+		//! Initialize the LongInt field.
+		/*!
+            \param data A reference to the LongInt to initialize.
+            \param bytes Number of bytes to initialize
+            \param value The value of the LongInt
+         */
 		private void init(LongInt[] data, int bytes, int value)
 		{
 			for (int i = 0; i < data.Length; i++)
 				data [i] = new LongInt (bytes, value);
 		}
 
+		//! Default constructor.
+		/*!
+            \param _groups Number of groups.
+            \param _players Number of players per gruop (total of players = _groups * _players).
+            \param _weeks Number of weeks.
+         */
 		public GolfersLongIntCostStrategy(int _groups, int _players, int _weeks)
 		{
 			groups = _groups;
@@ -44,7 +65,7 @@ namespace POSL.Benchmark
 			init (group_partners, TL, 0);
 		}
 
-		public int solutionCost(int[] configuration)
+		public int solutionCost(Solution solution)
 		{
 			int golfers = TP; //players * groups;
 			int table_length = TL; //golfers / 32 + 1; // how long must be the LongInt
@@ -65,13 +86,13 @@ namespace POSL.Benchmark
 					for(int i = start_tournament; i < end_tournament; i++)
 						for(int j = start_tournament; j < end_tournament; j++)
 					{
-						alldiff.activate(configuration[i]-1); // 0-based
+						alldiff.activate(solution[i]-1); // 0-based
 						if(i != j)
 						{
 							//new_partner.deactivateAll(); //new_partner.clearBits();// LongInt new_partner (table_length, 0);
 							//new_partner.activate(configuration[j]);
 							//group_partners[configuration[i]] = group_partners[configuration[i]] | new_partner;
-							group_partners[configuration[i]].activate(configuration[j]-1);
+							group_partners[solution[i]].activate(solution[j]-1);
 						}
 					}
 				}

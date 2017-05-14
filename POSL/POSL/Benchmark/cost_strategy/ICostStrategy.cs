@@ -1,4 +1,5 @@
 using System;
+using POSL.Data;
 
 /**
  * POSL
@@ -20,7 +21,7 @@ namespace POSL.Benchmark
         \param _configuration A configuration (solution).
         \return Cost of the given configuration.
      	*/
-		int solutionCost(int[] configuration);
+		int solutionCost(Solution solution);
 	}
 }
 
