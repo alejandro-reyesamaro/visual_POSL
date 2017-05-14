@@ -252,6 +252,12 @@ namespace POSL.Tools
 			for (int i = 0; i < arr.Length; i++)
 				arr [i] = value;
 		}
+
+		public static void copy(int[] arr_source, int src_start, int src_end_out, int[] destination, int dest_start)
+		{
+			for (int i = src_start; i < src_end_out; i++)
+				destination [dest_start++] = arr_source [i];
+		}
 	}
 }
 

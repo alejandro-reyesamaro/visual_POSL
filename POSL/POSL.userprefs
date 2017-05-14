@@ -1,24 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Tools/MergedLongInt.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Data/Solution.cs">
     <Files>
-      <File FileName="POSL/Benchmark/cost_strategy/ICostStrategy.cs" Line="9" Column="4" />
-      <File FileName="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs" Line="10" Column="4" />
-      <File FileName="POSL/Tools/PoslTools.cs" Line="12" Column="4" />
-      <File FileName="POSL/Tools/T_Change.cs" Line="9" Column="4" />
-      <File FileName="POSL/Benchmark/cost_strategy/IProjectableCost.cs" Line="16" Column="34" />
-      <File FileName="POSL/Benchmark/cost_strategy/IReseteable.cs" Line="26" Column="1" />
-      <File FileName="POSL/Benchmark/cost_strategy/ISickestVariableStrategy.cs" Line="23" Column="3" />
-      <File FileName="POSL/Tools/LongInt.cs" Line="58" Column="21" />
-      <File FileName="POSL/Tools/MergedLongInt.cs" Line="36" Column="35" />
+      <File FileName="POSL/Tools/PoslTools.cs" Line="258" Column="43" />
+      <File FileName="POSL/Tools/LongInt.cs" Line="30" Column="18" />
+      <File FileName="POSL/Benchmark/cost_strategy/GolfersLongIntCostStrategy.cs" Line="39" Column="6" />
+      <File FileName="POSL/Benchmark/cost_strategy/GolfersRelativeCostStrategy.cs" Line="37" Column="10" />
+      <File FileName="POSL/Tools/RandomGenerator.cs" Line="22" Column="11" />
+      <File FileName="POSL/Tools/ConnectionMatrix.cs" Line="56" Column="30" />
+      <File FileName="POSL/Data/ComputationData.cs" Line="27" Column="92" />
+      <File FileName="POSL/Data/Domain.cs" Line="13" Column="1" />
+      <File FileName="POSL/Data/UniformDomain.cs" Line="29" Column="21" />
+      <File FileName="POSL/Data/Solution.cs" Line="21" Column="63" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="POSL" expanded="True">
-            <Node name="Benchmark" expanded="True">
-              <Node name="cost_strategy" expanded="True" />
+            <Node name="Data" expanded="True">
+              <Node name="Solution.cs" selected="True" />
             </Node>
+            <Node name="Tools" expanded="True" />
           </Node>
         </State>
       </Pad>

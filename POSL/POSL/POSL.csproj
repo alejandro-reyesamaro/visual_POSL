@@ -48,11 +48,16 @@
     <Compile Include="Benchmark\cost_strategy\GolfersRelativeCostStrategy.cs" />
     <Compile Include="Tools\RandomGenerator.cs" />
     <Compile Include="Tools\ConnectionMatrix.cs" />
+    <Compile Include="Data\ComputationData.cs" />
+    <Compile Include="Data\Domain.cs" />
+    <Compile Include="Data\UniformDomain.cs" />
+    <Compile Include="Data\Solution.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Benchmark\" />
     <Folder Include="Benchmark\cost_strategy\" />
     <Folder Include="Tools\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
