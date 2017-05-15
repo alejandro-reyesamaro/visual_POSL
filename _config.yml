@@ -1,9 +1,0 @@
-theme: jekyll-theme-cayman
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "html/html"
-    values:
-      layout: "my-site"
