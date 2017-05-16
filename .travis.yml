@@ -3,9 +3,9 @@ language: csharp
 solution: POSL/POSL.sln
 
 install:
+  - sudo apt-get install nunit-console
   - nuget restore POSL/POSL.sln
-  - nuget install NUnit.Runners -Version 4.0.12 -OutputDirectory testrunner
 
 script:
-  - xbuild /p:Configuration=Release POSL/POSL.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.4.0.12/tools/nunit3-console.exe ./POSL/POSL_Test/bin/Debug/POSL_Test.dll
+  - xbuild ./POSL/POSL.sln
+  - nunit-console ./POSL/POSL_Test/bin/Debug/POSL_Test.dll
