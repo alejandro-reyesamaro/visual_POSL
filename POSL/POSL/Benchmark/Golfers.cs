@@ -2,26 +2,26 @@ using System;
 using POSL.Data;
 using POSL.Tools;
 
-/**
- * POSL
- *
- * \brief Class to represent an instance of a Golfers Problems
- * \author Alejandro Reyes
- * \date 2017-05-14
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class Golfers
 	 * \brief Class to represent an instance of a Golfers Problems
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-14
 	 */
 	public class Golfers : Benchmark
 	{
-		//! [number of groups],[players per group],[weeks to play]
-		private int groups;
-		private int players;
-		private int weeks;
+		private int groups; /*!< number of groups */
+		private int players; /*!< number of player */
+		private int weeks; /*!< number of weeks */
 
+		//! Main constructor.
+		/*!
+            \param g Number of groups.
+            \param p Number of players per gruop (total of players = g * p).
+            \param w Number of weeks.
+         */
 		public Golfers(int g, int p, int w)
 			: base(g * p * w,
 			       new UniformDomain(1, p * g),
@@ -34,6 +34,7 @@ namespace POSL.Benchmarks
 			weeks = w;
 		}
 
+		//! From <Benchmark>
 		public override string showInstance()
 		{
 			string str =  "Golfers: players-" + PoslTools.int2str(players);

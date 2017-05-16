@@ -5,6 +5,12 @@ using System.Collections.Generic;
 
 namespace POSL.Benchmarks
 {
+	/*!
+	 * \class GolfersRelativeCostStrategy
+	 * \brief Class to represent the cost stratategy of Social Golgers Problem
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-15
+	 */
 	public class GolfersRelativeCostStrategy : IRelativeCostStrategy
 	{
 		//! The current configuration.
@@ -23,6 +29,12 @@ namespace POSL.Benchmarks
 		private int TP { get{ return players * groups; } }
 		private int T { get{ return (groups * players * weeks); } }
 
+		//! Default constructor.
+		/*!
+            \param g Number of groups.
+            \param p Number of players per gruop (total of players = _groups * _players).
+            \param w Number of weeks.
+         */
 		public GolfersRelativeCostStrategy(int g, int p, int w)
 		{
 			groups = g;
@@ -37,6 +49,11 @@ namespace POSL.Benchmarks
 		//! (Property) From <RelativeCostStrategy>
 		public int currentCost() { return current_cost; }
 
+		//! Initialize the required information to compute the relative cost.
+		/*!
+            \param solution Solution (configuration)
+            \param _initial_cost The initial cost of the configuration (to test)
+         */
 		public void initializeCostData(Solution solution, int _initial_cost)
 		{
 			configuration = solution.GetConfByCopy;
@@ -61,6 +78,13 @@ namespace POSL.Benchmarks
 			current_cost = _initial_cost;
 		}
 
+		//! Computes the cost of a solution relative to the current.
+		/*!
+            \param solution Solution (configuration)
+            \param change Performed changes w.r.t. the current configuration
+            \param updating Whether the internal information has to be updated
+            \return The relative cost
+         */
 		public int relative_cost(Solution new_solution, T_Changes change, bool updating)
 		{
 			int cost = 0;
@@ -94,6 +118,10 @@ namespace POSL.Benchmarks
 			return cost;
 		}
 
+		//! Updates the current infoemation (configuration).
+		/*!
+            \param solution Solution (configuration)
+         */
 		public void updateConfiguration(Solution new_solution)
 		{
 			T_Changes changes = Solution.getChanges(configuration, new_solution);
@@ -104,26 +132,42 @@ namespace POSL.Benchmarks
 			}
 		}
 
+		//! Computes the cost of a solution relative to the current.
+		/*!
+            \param solution Solution (configuration)
+            \return The relative cost
+         */
 		public int relativeSolutionCost(Solution new_solution)
 		{
 			T_Changes changes = Solution.getChanges(configuration, new_solution);
 			return relativeSolutionCost(new_solution, changes);
 		}
 
+		//! Computes the cost of a solution relative to the current.
+		/*!
+            \param solution Solution (configuration)
+            \param change Performed changes w.r.t. the current configuration
+            \return The relative cost
+         */
 		public int relativeSolutionCost(Solution new_solution, T_Changes _changes)
 		{
 			return current_cost + relative_cost(new_solution, _changes, false);
 		}
 
+		//! Computes the projected cost of a variable
+		/*!
+            \param variable_index The index of the variable
+            \return The projected cost
+         */
 		public int costOnVariable(int variable_index)
 		{
 			return cc_occurrences.ranking_cost_of_variable(variable_index);
 		}
 
-
-		///
-		/// \brief Returns just the worst player
-		///
+		//! Selects the worst variable w.r.t. the projected cost
+		/*!
+            \return Just the worst player (the index of the player)
+         */
 		public int sickestVariable()
 		{
 			bad_variables.Clear();

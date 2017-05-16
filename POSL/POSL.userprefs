@@ -1,21 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL_Test/Test_Solution.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs">
     <Files>
       <File FileName="POSL/Solver/PSP.cs" Line="15" Column="40" />
       <File FileName="POSL/Benchmark/Benchmark.cs" Line="1" Column="1" />
       <File FileName="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/Solution.cs" Line="1" Column="1" />
+      <File FileName="POSL/Data/Solution.cs" Line="11" Column="22" />
       <File FileName="POSL/Data/IDynamicNeighborhood.cs" Line="1" Column="1" />
       <File FileName="POSL_Test/ConfigurationProvider.cs" Line="1" Column="1" />
       <File FileName="POSL_Test/Test_Golfers.cs" Line="1" Column="1" />
-      <File FileName="POSL_Test/Test_Solution.cs" Line="22" Column="1" />
+      <File FileName="POSL/Data/Neighborhood.cs" Line="14" Column="5" />
+      <File FileName="POSL/Data/UniformDomain.cs" Line="1" Column="1" />
+      <File FileName="POSL/Data/Domain.cs" Line="17" Column="2" />
+      <File FileName="POSL/Data/DecisionPair.cs" Line="9" Column="5" />
+      <File FileName="POSL/Data/ComputationData.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="POSL_Test" expanded="True" selected="True">
-            <Node name="References" expanded="True" />
+          <Node name="POSL" expanded="True">
+            <Node name="Benchmark" expanded="True">
+              <Node name="cost_strategy" expanded="True">
+                <Node name="IRelativeCostStrategy.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Solver" expanded="True" />
           </Node>
         </State>
       </Pad>

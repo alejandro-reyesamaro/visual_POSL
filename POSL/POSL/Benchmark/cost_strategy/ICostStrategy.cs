@@ -1,18 +1,13 @@
 using System;
 using POSL.Data;
 
-/**
- * POSL
- *
- * \brief Interface to represent an absolute solution cost strategy
- * \author Alejandro Reyes
- * \date 2016-05-13
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class ICostStrategy
 	 * \brief Interface to represent an absolute solution cost strategy
+	 * \author Alejandro Reyes
+ 	 * \date 2016-05-13
 	 */
 	public interface ICostStrategy
 	{

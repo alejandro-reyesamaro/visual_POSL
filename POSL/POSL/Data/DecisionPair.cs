@@ -1,18 +1,13 @@
 using System;
 using POSL.Tools;
 
-/**
- * POSL
- *
- * \brief Class to represent a couple of solutions (current and new found)
- * \author Alejandro Reyes
- * \date 2017-05-14
- */
 namespace POSL.Data
 {
 	/*!
 	 * \class DecisionPair
 	 * \brief Class to represent a couple of solutions (current and new found)
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-14
 	 */
 	public class DecisionPair : ComputationData
 	{

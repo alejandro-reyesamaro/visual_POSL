@@ -2,18 +2,13 @@ using System;
 using POSL.Data;
 using POSL.Tools;
 
-/**
- * POSL
- *
- * \brief Class to represent the way Social Golfers problem shows its result (solution)
- * \author Alejandro Reyes
- * \date 2017-05-14
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class GolfersDefaultShowStrategy
 	 * \brief Class to represent the way Social Golfers problem shows its result (solution)
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-14
 	 */
 	public class GolfersDefaultShowStrategy : IShowStrategy
 	{
@@ -22,7 +17,7 @@ namespace POSL.Benchmarks
 		private int players;
 		private int weeks;
 
-		//! Default constructor.
+		//! Main constructor.
 		/*!
             \param _groups Number of groups.
             \param _players Number of players per gruop (total of players = _groups * _players).

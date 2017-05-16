@@ -35,8 +35,8 @@ namespace POSL.Solver
 		public int CurrentCost { get{ return bench.CurrentCost; } }
 		public int GetBestCostSoFar { get { return best_found_cost; } }
 
-		private RandomGenerator rand;
-		public RandomGenerator GetRandomizer { get { return rand; } }
+		//private RandomGenerator rand;
+		//public RandomGenerator GetRandomizer { get { return rand; } }
 
 		public PSP(Benchmark _bench)
 		{

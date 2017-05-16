@@ -4,6 +4,12 @@ using System.Collections.Generic;
 
 namespace POSL.Data
 {
+	/*!
+	 * \class Solution solution.h
+	 * \brief Class to represent a solution (configuration)
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-15
+	 */
 	public class Solution : ComputationData
 	{
 		private Domain variables_domains;

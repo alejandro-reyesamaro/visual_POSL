@@ -1,17 +1,12 @@
 using System;
 
-/**
- * POSL
- *
- * \brief Interface to represent the a class that can projec the cost of a variable
- * \author Alejandro Reyes
- * \date 2017-05-13
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class IProjectableCost
 	 * \brief Interface to represent the a class that can projec the cost of a variable
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-13
 	 */
 	public interface IProjectableCost
 	{

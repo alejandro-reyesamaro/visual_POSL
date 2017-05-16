@@ -2,19 +2,14 @@ using System;
 using POSL.Tools;
 using POSL.Data;
 
-/**
- * POSL
- *
- * \brief Interface to represent a relative solution cost strategy
- * \author Alejandro Reyes
- * \date 2016-05-13
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	* \class IRelativeCostStrategy
 	* \brief Interface to represent a relative solution cost strategy
-	 */
+	* \author Alejandro Reyes
+ 	* \date 2016-05-13
+	*/
 	public interface IRelativeCostStrategy
 	{
 		//! Computes the cost of a configuration relative to the current configuration.

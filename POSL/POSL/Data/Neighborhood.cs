@@ -4,14 +4,15 @@ using System;
  * POSL
  *
  * \brief (Abstract) Class to represent a neighborhood of a configuration
- * \author Alejandro Reyes
- * \date 2017-05-15
+ * 
  */
 namespace POSL.Data
 {
 	/*!
 	 * \class Neighborhood neighborhood.h
 	 * \brief (Abstract) Class to represent a neighborhood of a configuration
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-15
 	 */
 	public abstract class Neighborhood : ComputationData
 	{

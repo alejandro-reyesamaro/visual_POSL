@@ -40,12 +40,12 @@ namespace POSL.Benchmarks
 				data [i] = new LongInt (bytes, value);
 		}
 
-		//! Default constructor.
+		//! Main constructor.
 		/*!
             \param _groups Number of groups.
             \param _players Number of players per gruop (total of players = _groups * _players).
             \param _weeks Number of weeks.
-         */
+        */
 		public GolfersLongIntCostStrategy(int _groups, int _players, int _weeks)
 		{
 			groups = _groups;
@@ -60,6 +60,11 @@ namespace POSL.Benchmarks
 			init (group_partners, TL, 0);
 		}
 
+		//! Computes the cost of a solution (configuration)
+		/*!
+            \param solution Solution (configuration)
+            \return Cost of the given configuration.
+         */
 		public int solutionCost(Solution solution)
 		{
 			int golfers = TP; //players * groups;

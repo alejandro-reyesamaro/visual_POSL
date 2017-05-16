@@ -1,17 +1,12 @@
 using System;
 
-/**
- * POSL
- *
- * \brief (Abstract) Class to represent all types of I/O in POSL
- * \author Alejandro Reyes
- * \date 2017-05-14
- */
 namespace POSL.Data
 {
 	/*!
 	 * \class ComputationData
 	 * \brief (Abstract) Class to represent all types of I/O in POSL
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-14
 	 */
 	public abstract class ComputationData
 	{

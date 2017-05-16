@@ -1,17 +1,12 @@
 using System;
 
-/**
- * POSL
- *
- * \brief Interface to represent a class that performs a reset
- * \author Alejandro Reyes
- * \date 2017-05-13
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class IReseteable
 	 * \brief Interface to represent a relative solution cost strategy
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-13
 	 */
 	public interface IReseteable
 	{
