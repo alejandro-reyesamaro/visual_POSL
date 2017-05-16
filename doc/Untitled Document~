@@ -1,0 +1,16 @@
+/**
+@brief POSL documentation
+@author Alejandro REYES AMARO
+@file
+*/
+/**
+@mainpage POSL
+A parallel Oriented Solver Language
+ 
+Introduction
+------------
+The multi-core technology and massive parallel architectures are nowadays more accessible for a broad public through hardware like the Xeon Phi or GPU cards. This architecture strategy has been commonly adopted by processor manufacturers to stick with Moore’s law. However, this new architecture implies new ways of designing and implementing algorithms to exploit their full potential. This is in particular true for constraint-based solvers dealing with combinatorial optimization problems.
+
+Furthermore, the developing time needed to code parallel solvers is often underestimated. In fact, conceiving efficient algorithms to solve certain problems takes a considerable amount of time. In this thesis we present POSL, a Parallel-Oriented Solver Language for building solvers based on meta-heuristic in order to solve Constraint Satisfaction Problems (CSP) in parallel. The main goal of this thesis is to obtain a system with which solvers can be easily built, reducing therefore their development effort by proposing a mechanism for code reusing between solvers. It also provides a mechanism to implement solver-independent communication strategies. We also present a detailed analysis of the results obtained when solving some CSPs. The goal is not to outperform the state of the art solvers in terms of efficiency, but to show that it is possible to rapidly prototype with POSL in order to experiment different communication strategies.
+ 
+*/
