@@ -1,0 +1,155 @@
+\hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy}{}\section{P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy Class Reference}
+\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy}\index{P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy}}
+
+
+Interface to represent a relative solution cost strategy.  
+
+
+Inheritance diagram for P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a6fe0080196e13becddbd8ff93612d9ac}{relative\+Solution\+Cost} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\begin{DoxyCompactList}\small\item\em Computes the cost of a configuration relative to the current configuration. \end{DoxyCompactList}\item 
+void \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a068a26820f0944ada9c38e30a4e4d593}{initialize\+Cost\+Data} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution, int \+\_\+initial\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Initialize the information related to the cost. \end{DoxyCompactList}\item 
+int \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a4582db712ef4cbb67b790459f7c441ac}{relative\+Solution\+Cost} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution, \hyperlink{structPOSL_1_1Tools_1_1T__Changes}{T\+\_\+\+Changes} \+\_\+change)
+\begin{DoxyCompactList}\small\item\em Computes the cost of a configuration relative to the current configuration. \end{DoxyCompactList}\item 
+void \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a74e16251c8b6304dec763e640e19f1df}{update\+Configuration} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} new\+\_\+solution)
+\begin{DoxyCompactList}\small\item\em Updates the current configuration. \end{DoxyCompactList}\item 
+int \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a98945d070a021b588b10f79ca3ea8f4b}{current\+Cost} ()
+\begin{DoxyCompactList}\small\item\em Returns the current cost. \end{DoxyCompactList}\item 
+int \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_aab0193ee08a9bbe6648c1b8f6db0556a}{cost\+On\+Variable} (int variable\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Computes the projected cost of a variable. \end{DoxyCompactList}\item 
+int \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_ae52e1ef62b902b5e87be5f6bcdb64dbc}{sickest\+Variable} ()
+\begin{DoxyCompactList}\small\item\em Returns the variable with the highest projected cost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface to represent a relative solution cost strategy. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_aab0193ee08a9bbe6648c1b8f6db0556a}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_aab0193ee08a9bbe6648c1b8f6db0556a}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!cost\+On\+Variable@{cost\+On\+Variable}}
+\index{cost\+On\+Variable@{cost\+On\+Variable}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{cost\+On\+Variable()}{costOnVariable()}}
+{\footnotesize\ttfamily int P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+cost\+On\+Variable (\begin{DoxyParamCaption}\item[{int}]{variable\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Computes the projected cost of a variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable\+\_\+index} & Index of a variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The projected cost of the variable with index {\itshape variable\+\_\+index}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a98945d070a021b588b10f79ca3ea8f4b}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a98945d070a021b588b10f79ca3ea8f4b}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!current\+Cost@{current\+Cost}}
+\index{current\+Cost@{current\+Cost}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{current\+Cost()}{currentCost()}}
+{\footnotesize\ttfamily int P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+current\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current cost. 
+
+\begin{DoxyReturn}{Returns}
+Current cost. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a068a26820f0944ada9c38e30a4e4d593}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a068a26820f0944ada9c38e30a4e4d593}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!initialize\+Cost\+Data@{initialize\+Cost\+Data}}
+\index{initialize\+Cost\+Data@{initialize\+Cost\+Data}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{initialize\+Cost\+Data()}{initializeCostData()}}
+{\footnotesize\ttfamily void P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+initialize\+Cost\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution}}]{solution,  }\item[{int}]{\+\_\+initial\+\_\+cost }\end{DoxyParamCaption})}
+
+
+
+Initialize the information related to the cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+configuration} & A configuration (solution). \\
+\hline
+{\em \+\_\+initial\+\_\+cost} & The initial cost of the configuration. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a6fe0080196e13becddbd8ff93612d9ac}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a6fe0080196e13becddbd8ff93612d9ac}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!relative\+Solution\+Cost@{relative\+Solution\+Cost}}
+\index{relative\+Solution\+Cost@{relative\+Solution\+Cost}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{relative\+Solution\+Cost()}{relativeSolutionCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+relative\+Solution\+Cost (\begin{DoxyParamCaption}\item[{\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution}}]{solution }\end{DoxyParamCaption})}
+
+
+
+Computes the cost of a configuration relative to the current configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution} & A configuration (solution). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of the given configuration. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a4582db712ef4cbb67b790459f7c441ac}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a4582db712ef4cbb67b790459f7c441ac}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!relative\+Solution\+Cost@{relative\+Solution\+Cost}}
+\index{relative\+Solution\+Cost@{relative\+Solution\+Cost}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{relative\+Solution\+Cost()}{relativeSolutionCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+relative\+Solution\+Cost (\begin{DoxyParamCaption}\item[{\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution}}]{solution,  }\item[{\hyperlink{structPOSL_1_1Tools_1_1T__Changes}{T\+\_\+\+Changes}}]{\+\_\+change }\end{DoxyParamCaption})}
+
+
+
+Computes the cost of a configuration relative to the current configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+configuration} & A configuration (solution). \\
+\hline
+{\em \+\_\+change} & The performed changes w.\+r.\+t the current configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cost of the given configuration. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_ae52e1ef62b902b5e87be5f6bcdb64dbc}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_ae52e1ef62b902b5e87be5f6bcdb64dbc}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!sickest\+Variable@{sickest\+Variable}}
+\index{sickest\+Variable@{sickest\+Variable}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{sickest\+Variable()}{sickestVariable()}}
+{\footnotesize\ttfamily int P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+sickest\+Variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the variable with the highest projected cost. 
+
+\begin{DoxyReturn}{Returns}
+The projected cost of the variable with highest projected cost. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a74e16251c8b6304dec763e640e19f1df}\label{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy_a74e16251c8b6304dec763e640e19f1df}} 
+\index{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}!update\+Configuration@{update\+Configuration}}
+\index{update\+Configuration@{update\+Configuration}!P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy@{P\+O\+S\+L\+::\+Benchmarks\+::\+I\+Relative\+Cost\+Strategy}}
+\subsubsection{\texorpdfstring{update\+Configuration()}{updateConfiguration()}}
+{\footnotesize\ttfamily void P\+O\+S\+L.\+Benchmarks.\+I\+Relative\+Cost\+Strategy.\+update\+Configuration (\begin{DoxyParamCaption}\item[{\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution}}]{new\+\_\+solution }\end{DoxyParamCaption})}
+
+
+
+Updates the current configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+config} & A configuration (solution). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+O\+S\+L/\+P\+O\+S\+L/\+Benchmark/cost\+\_\+strategy/I\+Relative\+Cost\+Strategy.\+cs\end{DoxyCompactItemize}
