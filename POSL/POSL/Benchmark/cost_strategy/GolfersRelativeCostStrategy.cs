@@ -3,7 +3,7 @@ using POSL.Tools;
 using POSL.Data;
 using System.Collections.Generic;
 
-namespace POSL.Benchmark
+namespace POSL.Benchmarks
 {
 	public class GolfersRelativeCostStrategy : IRelativeCostStrategy
 	{

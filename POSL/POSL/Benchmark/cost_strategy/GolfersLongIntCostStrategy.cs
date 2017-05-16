@@ -9,7 +9,7 @@ using POSL.Data;
  * \author Alejandro Reyes
  * \date 2017-05-14
  */
-namespace POSL.Benchmark
+namespace POSL.Benchmarks
 {
 	/*!
 	 * \class GolfersLongIntCostStrategy

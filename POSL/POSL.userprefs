@@ -1,25 +1,28 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Benchmark/Benchmark.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL_Test/Test_Solution.cs">
     <Files>
+      <File FileName="POSL/Solver/PSP.cs" Line="15" Column="40" />
+      <File FileName="POSL/Benchmark/Benchmark.cs" Line="1" Column="1" />
+      <File FileName="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs" Line="1" Column="1" />
       <File FileName="POSL/Data/Solution.cs" Line="1" Column="1" />
-      <File FileName="POSL/Benchmark/showing_strategy/GolfersDefaultShowStrategy.cs" Line="15" Column="38" />
-      <File FileName="POSL/Benchmark/showing_strategy/IShowStrategy.cs" Line="14" Column="13" />
-      <File FileName="POSL/Benchmark/Golfers.cs" Line="37" Column="19" />
-      <File FileName="POSL/Benchmark/cost_strategy/GolfersLongIntCostStrategy.cs" Line="1" Column="1" />
-      <File FileName="POSL/Benchmark/cost_strategy/GolfersRelativeCostStrategy.cs" Line="1" Column="1" />
-      <File FileName="POSL/Benchmark/cost_strategy/ICostStrategy.cs" Line="13" Column="13" />
-      <File FileName="POSL/Benchmark/cost_strategy/IProjectableCost.cs" Line="13" Column="28" />
-      <File FileName="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs" Line="14" Column="12" />
-      <File FileName="POSL/Benchmark/cost_strategy/IReseteable.cs" Line="13" Column="23" />
-      <File FileName="POSL/Benchmark/cost_strategy/ISickestVariableStrategy.cs" Line="13" Column="13" />
-      <File FileName="POSL/Data/ComputationData.cs" Line="13" Column="27" />
-      <File FileName="POSL/Data/Domain.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/UniformDomain.cs" Line="1" Column="1" />
-      <File FileName="POSL/Tools/ConnectionMatrix.cs" Line="1" Column="1" />
-      <File FileName="POSL/Tools/LongInt.cs" Line="1" Column="1" />
-      <File FileName="POSL/Benchmark/Benchmark.cs" Line="18" Column="17" />
+      <File FileName="POSL/Data/IDynamicNeighborhood.cs" Line="1" Column="1" />
+      <File FileName="POSL_Test/ConfigurationProvider.cs" Line="1" Column="1" />
+      <File FileName="POSL_Test/Test_Golfers.cs" Line="1" Column="1" />
+      <File FileName="POSL_Test/Test_Solution.cs" Line="22" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="POSL_Test" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

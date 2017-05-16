@@ -55,6 +55,12 @@
     <Compile Include="Benchmark\showing_strategy\IShowStrategy.cs" />
     <Compile Include="Benchmark\Golfers.cs" />
     <Compile Include="Benchmark\Benchmark.cs" />
+    <Compile Include="Data\DecisionPair.cs" />
+    <Compile Include="Data\data_strategy\IPOSL_Iterator.cs" />
+    <Compile Include="Data\data_strategy\ElementsChangeIterator.cs" />
+    <Compile Include="Data\Neighborhood.cs" />
+    <Compile Include="Data\IDynamicNeighborhood.cs" />
+    <Compile Include="Solver\PSP.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -63,5 +69,7 @@
     <Folder Include="Tools\" />
     <Folder Include="Data\" />
     <Folder Include="Benchmark\showing_strategy\" />
+    <Folder Include="Data\data_strategy\" />
+    <Folder Include="Solver\" />
   </ItemGroup>
 </Project>

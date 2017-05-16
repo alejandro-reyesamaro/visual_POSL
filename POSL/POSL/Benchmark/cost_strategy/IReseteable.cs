@@ -7,7 +7,7 @@ using System;
  * \author Alejandro Reyes
  * \date 2017-05-13
  */
-namespace POSL.Benchmark
+namespace POSL.Benchmarks
 {
 	/*!
 	 * \class IReseteable

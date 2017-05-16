@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using System;
-using POSL.Benchmark;
+using POSL.Benchmarks;
 using POSL.Data;
 
 namespace POSL_Test

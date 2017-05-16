@@ -8,7 +8,7 @@ using POSL.Data;
  * \author Alejandro Reyes
  * \date 2016-05-13
  */
-namespace POSL.Benchmark
+namespace POSL.Benchmarks
 {
 	/*!
 	 * \class ICostStrategy

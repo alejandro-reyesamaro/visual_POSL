@@ -41,6 +41,13 @@ namespace POSL.Data
 			Array.Copy (conf, configuration, conf.Length);
 		}
 
+		public Solution clone ()
+		{
+			int[] conf = new int[this.configuration.Length];
+			Array.Copy (this.configuration, conf, conf.Length);
+			return new Solution (this.variables_domains, conf);
+		}
+
 		public void updateConfiguration(int[] new_config)
 		{
 			if(new_config.Length != configuration.Length)
@@ -95,7 +102,6 @@ namespace POSL.Data
 					l_new_positions.Add (i);
 				}
 			}
-
 			return new T_Changes (l_new_positions.ToArray (), l_new_values.ToArray());
 		}
 	}

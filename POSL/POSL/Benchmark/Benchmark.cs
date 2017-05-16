@@ -2,7 +2,7 @@ using System;
 using POSL.Data;
 using POSL.Tools;
 
-namespace POSL.Benchmark
+namespace POSL.Benchmarks
 {
 	/*!
 	 * \class Benchmark
@@ -50,25 +50,35 @@ namespace POSL.Benchmark
 		{
 			return cost_strategy.solutionCost(solution);
 		}
-		public int currentCost()
+		public int CurrentCost
 		{
-			return relative_cost_strategy.currentCost();
+			get { return relative_cost_strategy.currentCost (); }
 		}
 		public string ShowSolution(Solution solution)
 		{
 			return show_strategy.showSolution(solution);
 		}
-		public Solution GetSolution()
+		public Solution GetSolution
 		{
-			return new Solution(domain, configuration);
+			get { return new Solution (domain, configuration); }
 		}
 		void SetDefaultConfiguration(int[] _default_configuration)
 		{
 			Array.Copy (_default_configuration, default_configuration, default_configuration.Length);
 		}
-		int[] GetDefaultConfiguration()
+		int[] GetDefaultConfiguration
 		{
-			return default_configuration;
+			get{ return default_configuration; }
+		}
+		public void InitializeCostData(Solution solution)
+		{
+			relative_cost_strategy.initializeCostData(solution, solutionCost(solution));
+			configuration = solution.GetConfByCopy;
+		}
+		public void UpdateSolution(Solution solution)
+		{    
+			relative_cost_strategy.updateConfiguration(solution);
+			configuration = solution.GetConfByCopy;
 		}
 		// ----- 
 
@@ -99,16 +109,7 @@ namespace POSL.Benchmark
 
 
 		// ----- PROTECTED
-		protected void UpdateSolution(Solution solution)
-		{    
-			relative_cost_strategy.updateConfiguration(solution);
-			configuration = solution.GetConfByCopy;
-		}
-		protected void InitializeCostData(Solution solution)
-		{
-			relative_cost_strategy.initializeCostData(solution, solutionCost(solution));
-			configuration = solution.GetConfByCopy;
-		}
+
 		// ----- 
 	}
 }
