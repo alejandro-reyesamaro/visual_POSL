@@ -1,9 +1,6 @@
 [![Build Status](https://travis-ci.org/alejandro-reyesamaro/visual_POSL.svg?branch=master)](https://travis-ci.org/alejandro-reyesamaro/visual_POSL)
-
-@mainpage POSL
-A parallel Oriented Solver Language
  
-Introduction
+POSL: A parallel Oriented Solver Language
 ------------
 The multi-core technology and massive parallel architectures are nowadays more accessible for a broad public through hardware like the Xeon Phi or GPU cards. This architecture strategy has been commonly adopted by processor manufacturers to stick with Moore’s law. However, this new architecture implies new ways of designing and implementing algorithms to exploit their full potential. This is in particular true for constraint-based solvers dealing with combinatorial optimization problems.
 
