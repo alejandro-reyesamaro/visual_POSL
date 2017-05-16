@@ -3,7 +3,7 @@ using System;
 namespace POSL.Data
 {
 	/*!
-	 * \class POSL_Iterator posl_iterator.h
+	 * \class POSL_Iterator
 	 * \brief Interface to represent iterators
 	 * \author Alejandro Reyes
  	 * \date 2017-05-16

@@ -1,15 +1,9 @@
 using System;
 
-/**
- * POSL
- *
- * \brief (Abstract) Class to represent a neighborhood of a configuration
- * 
- */
 namespace POSL.Data
 {
 	/*!
-	 * \class Neighborhood neighborhood.h
+	 * \class Neighborhood 
 	 * \brief (Abstract) Class to represent a neighborhood of a configuration
 	 * \author Alejandro Reyes
  	 * \date 2017-05-15

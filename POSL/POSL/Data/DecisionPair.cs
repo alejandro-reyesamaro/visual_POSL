@@ -12,27 +12,45 @@ namespace POSL.Data
 	public class DecisionPair : ComputationData
 	{
 		private Solution current;
+		//! (Property) Returns the current solution
 		public Solution GetCurrent { get{ return current; } }
 
 		private Solution found;
+		//! (Property) Returns the found solution
 		public Solution GetFound{ get{ return found; } }
 
+		//! (Property) Returns the TAG
 		public override string Tag() { return "cd_DP"; }
 
+		//! (Property) Returns the packing ID (ID for the communication)
 		public string SolutionPackingID { get { return "658202" ;} } 
 
+		//! Main constructor.
+		/*!
+            \param _current Current solution
+            \param _found Found solution
+         */
 		public DecisionPair(Solution _current, Solution _found)
 		{
 			current = _current;
 			found = _found;
 		}
 
-		void update(int[] _current, int[] _found)
+		//! Updates the object from configurations
+		/*!
+            \param _current Current solution
+            \param _found Found solution
+         */
+		public void update(int[] _current, int[] _found)
 		{
 			current.updateConfiguration(_current);
 			found.updateConfiguration(_found);
 		}
 
+		//! Updates the object from a buffer
+		/*!
+            \param pack A buffer of integers
+         */
 		void updateFromPack(int[] pack)
 		{
 			int conf_size = pack[1];
@@ -46,11 +64,10 @@ namespace POSL.Data
 			found.updateConfiguration(config2);
 		}
 
-		public bool BothEquals()
-		{
-			return current.Equals(found);
-		}
+		//! (Property) Returns whether both configurations are equals
+		public bool BothEquals { get{ return current.Equals (found); } }
 
+		//! From <Object>
 		public override bool Equals(object other)
 		{ 
 			if (other is DecisionPair)
@@ -60,6 +77,7 @@ namespace POSL.Data
 			else return false;
 		}
 
+		//! From <Object>
 		public override int GetHashCode()
 		{
 			return base.GetHashCode ();
@@ -67,6 +85,7 @@ namespace POSL.Data
 
 		//std::shared_ptr<FactoryPacker> DecisionPair::BuildPacker(){ return std::make_shared<FactoryDecisionPairPacker>(shared_from_this()); }
 
+		//! From <ComputationData>
 		public override int comapareTo(ComputationData other, Func<ComputationData, int> criteria)
 		{
 			if(other.Tag() == Tag())

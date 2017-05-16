@@ -1,30 +1,31 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL_Test/Test_Solution.cs">
     <Files>
-      <File FileName="POSL/Solver/PSP.cs" Line="15" Column="40" />
-      <File FileName="POSL/Benchmark/Benchmark.cs" Line="1" Column="1" />
-      <File FileName="POSL/Benchmark/cost_strategy/IRelativeCostStrategy.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/Solution.cs" Line="11" Column="22" />
-      <File FileName="POSL/Data/IDynamicNeighborhood.cs" Line="1" Column="1" />
-      <File FileName="POSL_Test/ConfigurationProvider.cs" Line="1" Column="1" />
-      <File FileName="POSL_Test/Test_Golfers.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/Neighborhood.cs" Line="14" Column="5" />
-      <File FileName="POSL/Data/UniformDomain.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/Domain.cs" Line="17" Column="2" />
-      <File FileName="POSL/Data/DecisionPair.cs" Line="9" Column="5" />
+      <File FileName="POSL/Data/DecisionPair.cs" Line="39" Column="3" />
+      <File FileName="POSL/Benchmark/Golfers.cs" Line="19" Column="3" />
       <File FileName="POSL/Data/ComputationData.cs" Line="1" Column="1" />
+      <File FileName="POSL/Data/Domain.cs" Line="6" Column="19" />
+      <File FileName="POSL/Data/UniformDomain.cs" Line="10" Column="22" />
+      <File FileName="POSL/Data/IDynamicNeighborhood.cs" Line="13" Column="3" />
+      <File FileName="POSL/Data/Neighborhood.cs" Line="6" Column="25" />
+      <File FileName="POSL/Data/Solution.cs" Line="1" Column="1" />
+      <File FileName="POSL_Test/Test_Solution.cs" Line="21" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="POSL" expanded="True">
             <Node name="Benchmark" expanded="True">
-              <Node name="cost_strategy" expanded="True">
-                <Node name="IRelativeCostStrategy.cs" selected="True" />
-              </Node>
+              <Node name="cost_strategy" expanded="True" />
+              <Node name="showing_strategy" expanded="True" />
             </Node>
-            <Node name="Solver" expanded="True" />
+            <Node name="Data" expanded="True">
+              <Node name="data_strategy" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="POSL_Test" expanded="True">
+            <Node name="Test_Solution.cs" selected="True" />
           </Node>
         </State>
       </Pad>
