@@ -1,0 +1,80 @@
+\hypertarget{classPOSL_1_1Data_1_1Neighborhood}{}\section{P\+O\+S\+L.\+Data.\+Neighborhood Class Reference}
+\label{classPOSL_1_1Data_1_1Neighborhood}\index{P\+O\+S\+L.\+Data.\+Neighborhood@{P\+O\+S\+L.\+Data.\+Neighborhood}}
+
+
+(Abstract) Class to represent a neighborhood of a configuration  
+
+
+Inheritance diagram for P\+O\+S\+L.\+Data.\+Neighborhood\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPOSL_1_1Data_1_1Neighborhood}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a360ba755eb5e9d86a56723bb478ab469}\label{classPOSL_1_1Data_1_1Neighborhood_a360ba755eb5e9d86a56723bb478ab469}} 
+{\bfseries Neighborhood} (int\mbox{[}$\,$\mbox{]} \+\_\+current\+\_\+configuration)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a06bd81429e435cc7c434b29d62b8f50d}\label{classPOSL_1_1Data_1_1Neighborhood_a06bd81429e435cc7c434b29d62b8f50d}} 
+{\bfseries Neighborhood} (int \+\_\+config\+\_\+size)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a74e095bec02148e5816c8e11eacba9d5}\label{classPOSL_1_1Data_1_1Neighborhood_a74e095bec02148e5816c8e11eacba9d5}} 
+override string {\bfseries Tag} ()
+\item 
+override int \hyperlink{classPOSL_1_1Data_1_1Neighborhood_aa7014a3cbaf532f49d89468c20b7c269}{comapare\+To} (\hyperlink{classPOSL_1_1Data_1_1ComputationData}{Computation\+Data} other, Func$<$ \hyperlink{classPOSL_1_1Data_1_1ComputationData}{Computation\+Data}, int $>$ criteria)
+\begin{DoxyCompactList}\small\item\em Compare this object with other, given a function (criteria) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a3bf4058bac77b7a30623de0621536cb3}\label{classPOSL_1_1Data_1_1Neighborhood_a3bf4058bac77b7a30623de0621536cb3}} 
+abstract \hyperlink{interfacePOSL_1_1Data_1_1IPOSL__Iterator}{I\+P\+O\+S\+L\+\_\+\+Iterator} {\bfseries get\+Iterator} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a3f456c4d9b95e61ad17e3c68f5a1930e}\label{classPOSL_1_1Data_1_1Neighborhood_a3f456c4d9b95e61ad17e3c68f5a1930e}} 
+int \mbox{[}$\,$\mbox{]} {\bfseries Current\+Configuration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a7363f3e9bb33274139142cb36292b816}\label{classPOSL_1_1Data_1_1Neighborhood_a7363f3e9bb33274139142cb36292b816}} 
+string {\bfseries Solution\+Packing\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a1b9d521ea7bf517c33a513215ef65582}\label{classPOSL_1_1Data_1_1Neighborhood_a1b9d521ea7bf517c33a513215ef65582}} 
+abstract int {\bfseries Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_a492cc83da8bb5955f5dc42a14d4423ec}\label{classPOSL_1_1Data_1_1Neighborhood_a492cc83da8bb5955f5dc42a14d4423ec}} 
+abstract int \mbox{[}$\,$\mbox{]} {\bfseries this\mbox{[}int index\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+(Abstract) Class to represent a neighborhood of a configuration 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPOSL_1_1Data_1_1Neighborhood_aa7014a3cbaf532f49d89468c20b7c269}\label{classPOSL_1_1Data_1_1Neighborhood_aa7014a3cbaf532f49d89468c20b7c269}} 
+\index{P\+O\+S\+L\+::\+Data\+::\+Neighborhood@{P\+O\+S\+L\+::\+Data\+::\+Neighborhood}!comapare\+To@{comapare\+To}}
+\index{comapare\+To@{comapare\+To}!P\+O\+S\+L\+::\+Data\+::\+Neighborhood@{P\+O\+S\+L\+::\+Data\+::\+Neighborhood}}
+\subsubsection{\texorpdfstring{comapare\+To()}{comapareTo()}}
+{\footnotesize\ttfamily override int P\+O\+S\+L.\+Data.\+Neighborhood.\+comapare\+To (\begin{DoxyParamCaption}\item[{\hyperlink{classPOSL_1_1Data_1_1ComputationData}{Computation\+Data}}]{other,  }\item[{Func$<$ \hyperlink{classPOSL_1_1Data_1_1ComputationData}{Computation\+Data}, int $>$}]{criteria }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compare this object with other, given a function (criteria) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \hyperlink{classPOSL_1_1Data_1_1ComputationData}{Computation\+Data} to compare with. \\
+\hline
+{\em criteria} & A function (criteria). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if T\+H\+IS is lower, 1 if T\+H\+IS is bigger, 0 if equals 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classPOSL_1_1Data_1_1ComputationData_a6cca889bb4ce32104d91dba413ef8c56}{P\+O\+S\+L.\+Data.\+Computation\+Data}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+O\+S\+L/\+P\+O\+S\+L/\+Data/Neighborhood.\+cs\end{DoxyCompactItemize}

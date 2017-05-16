@@ -1,0 +1,11 @@
+language: csharp
+
+solution: POSL/POSL.sln
+
+install:
+  - nuget restore POSL/POSL.sln
+  - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
+
+script:
+  - xbuild /p:Configuration=Release POSL/POSL.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./POSL/POSL_Test/bin/Debug/POSL_Test.dll

@@ -2,18 +2,13 @@ using System;
 using POSL.Tools;
 using POSL.Data;
 
-/**
- * POSL
- *
- * \brief Class to represent the absolute cost stratategy of Social Golgers Problem
- * \author Alejandro Reyes
- * \date 2017-05-14
- */
 namespace POSL.Benchmarks
 {
 	/*!
 	 * \class GolfersLongIntCostStrategy
 	 * \brief Class to represent the absolute cost stratategy of Social Golgers Problem
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-14
 	 */
 	public class GolfersLongIntCostStrategy : ICostStrategy
 	{

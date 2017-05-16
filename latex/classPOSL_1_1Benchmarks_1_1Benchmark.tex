@@ -1,0 +1,96 @@
+\hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark}{}\section{P\+O\+S\+L.\+Benchmarks.\+Benchmark Class Reference}
+\label{classPOSL_1_1Benchmarks_1_1Benchmark}\index{P\+O\+S\+L.\+Benchmarks.\+Benchmark@{P\+O\+S\+L.\+Benchmarks.\+Benchmark}}
+
+
+(Abstract) Class to represent an instance of a problem  
+
+
+Inheritance diagram for P\+O\+S\+L.\+Benchmarks.\+Benchmark\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPOSL_1_1Benchmarks_1_1Benchmark}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_ae548e466c0be888895a5009429932201}\label{classPOSL_1_1Benchmarks_1_1Benchmark_ae548e466c0be888895a5009429932201}} 
+{\bfseries Benchmark} (int \+\_\+dimension, \hyperlink{classPOSL_1_1Domain}{Domain} \+\_\+domain, \hyperlink{interfacePOSL_1_1Benchmarks_1_1ICostStrategy}{I\+Cost\+Strategy} \+\_\+cost\+\_\+strategy, \hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy}{I\+Relative\+Cost\+Strategy} \+\_\+relative\+\_\+cost\+\_\+strategy, \hyperlink{interfacePOSL_1_1Benchmarks_1_1IShowStrategy}{I\+Show\+Strategy} \+\_\+show\+\_\+strategy)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a3dfb4640f087374b57bd40337c8cc920}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a3dfb4640f087374b57bd40337c8cc920}} 
+int {\bfseries relative\+Solution\+Cost} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_ab488f070e3fec663718efaea87e92084}\label{classPOSL_1_1Benchmarks_1_1Benchmark_ab488f070e3fec663718efaea87e92084}} 
+int {\bfseries relative\+Solution\+Cost} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} new\+\_\+solution, \hyperlink{structPOSL_1_1Tools_1_1T__Changes}{T\+\_\+\+Changes} changes)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a4be37728713fb268d139bc0a1b98a654}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a4be37728713fb268d139bc0a1b98a654}} 
+int {\bfseries solution\+Cost} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a2000f8bd97b5e5c39a5a4dfd9796336c}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a2000f8bd97b5e5c39a5a4dfd9796336c}} 
+string {\bfseries Show\+Solution} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a17f3f8597ab08be6a36bdc9216ec7cb4}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a17f3f8597ab08be6a36bdc9216ec7cb4}} 
+void {\bfseries Initialize\+Cost\+Data} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_aed1c0227427e7273345f1ee4d488187c}\label{classPOSL_1_1Benchmarks_1_1Benchmark_aed1c0227427e7273345f1ee4d488187c}} 
+void {\bfseries Update\+Solution} (\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} solution)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_aa38139d8ca8256f00f1e94630c71d1b1}\label{classPOSL_1_1Benchmarks_1_1Benchmark_aa38139d8ca8256f00f1e94630c71d1b1}} 
+int {\bfseries cost\+On\+Variable} (int index)
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a733060374289829c365ea2f8e8b2b7b9}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a733060374289829c365ea2f8e8b2b7b9}} 
+int {\bfseries sickest\+Variable} ()
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_aa47acbe1782a1ffa923c8c8b032010f9}\label{classPOSL_1_1Benchmarks_1_1Benchmark_aa47acbe1782a1ffa923c8c8b032010f9}} 
+virtual int \mbox{[}$\,$\mbox{]} {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a067bd6b6146982adc30a6962e4661660}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a067bd6b6146982adc30a6962e4661660}} 
+abstract string {\bfseries show\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_ae3e235947274b603a2211dc44c15ff83}\label{classPOSL_1_1Benchmarks_1_1Benchmark_ae3e235947274b603a2211dc44c15ff83}} 
+int {\bfseries problem\+\_\+dimension}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a935568da14ba382b8287baac1eebbd72}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a935568da14ba382b8287baac1eebbd72}} 
+\hyperlink{classPOSL_1_1Domain}{Domain} {\bfseries domain}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_ae9c7cd16c5befdf856a7dd7d4e7a824e}\label{classPOSL_1_1Benchmarks_1_1Benchmark_ae9c7cd16c5befdf856a7dd7d4e7a824e}} 
+int \mbox{[}$\,$\mbox{]} {\bfseries configuration}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_affe8324dcf208faa5a96d21ad452ecfb}\label{classPOSL_1_1Benchmarks_1_1Benchmark_affe8324dcf208faa5a96d21ad452ecfb}} 
+int \mbox{[}$\,$\mbox{]} {\bfseries default\+\_\+configuration}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_ad4d2d44386496a9df0ad20ade8f50ce7}\label{classPOSL_1_1Benchmarks_1_1Benchmark_ad4d2d44386496a9df0ad20ade8f50ce7}} 
+\hyperlink{interfacePOSL_1_1Benchmarks_1_1ICostStrategy}{I\+Cost\+Strategy} \hyperlink{classPOSL_1_1Benchmarks_1_1Benchmark_ad4d2d44386496a9df0ad20ade8f50ce7}{cost\+\_\+strategy}
+\begin{DoxyCompactList}\small\item\em S\+T\+R\+A\+T\+E\+G\+I\+ES. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a1cf12bd559af07704a90e30e911f80a4}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a1cf12bd559af07704a90e30e911f80a4}} 
+\hyperlink{interfacePOSL_1_1Benchmarks_1_1IRelativeCostStrategy}{I\+Relative\+Cost\+Strategy} {\bfseries relative\+\_\+cost\+\_\+strategy}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a7ff725396b155958d8ec2359d565da26}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a7ff725396b155958d8ec2359d565da26}} 
+\hyperlink{interfacePOSL_1_1Benchmarks_1_1IShowStrategy}{I\+Show\+Strategy} {\bfseries show\+\_\+strategy}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a430d199f3d0bf357b43f876deb380110}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a430d199f3d0bf357b43f876deb380110}} 
+int {\bfseries Dimension}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_abe0aa39dceb516506b4f61f989bc78fe}\label{classPOSL_1_1Benchmarks_1_1Benchmark_abe0aa39dceb516506b4f61f989bc78fe}} 
+\hyperlink{classPOSL_1_1Domain}{Domain} {\bfseries Variable\+\_\+\+Domain}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a2fed212788c95bfe98d2a47b6a05cb82}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a2fed212788c95bfe98d2a47b6a05cb82}} 
+int {\bfseries Current\+Cost}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{classPOSL_1_1Benchmarks_1_1Benchmark_a25c6ad71eaeee07eec0578d8ffff148e}\label{classPOSL_1_1Benchmarks_1_1Benchmark_a25c6ad71eaeee07eec0578d8ffff148e}} 
+\hyperlink{classPOSL_1_1Data_1_1Solution}{Solution} {\bfseries Get\+Solution}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+(Abstract) Class to represent an instance of a problem 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+P\+O\+S\+L/\+P\+O\+S\+L/\+Benchmark/Benchmark.\+cs\end{DoxyCompactItemize}
