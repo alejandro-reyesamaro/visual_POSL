@@ -37,9 +37,9 @@ namespace POSL.Benchmarks
 		//! From <Benchmark>
 		public override string showInstance()
 		{
-			string str =  "Golfers: players-" + PoslTools.int2str(players);
-			str += ", groups-" + PoslTools.int2str(groups);
-			str += ", weeks-" + PoslTools.int2str(weeks) + "\n";
+			string str =  "Golfers: players-" + players;
+			str += ", groups-" + groups;
+			str += ", weeks-" + weeks + "\n";
 			return str;
 		}
 	}

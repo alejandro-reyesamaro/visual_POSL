@@ -33,9 +33,9 @@ namespace POSL.Benchmarks
 		//! From <IShowStrategy>
 		public string showSolution(Solution solution)
 		{
-			string str =  "Golfers: players-" + PoslTools.int2str(players);
-			str += ", groups-" + PoslTools.int2str(groups);
-			str += ", weeks-" + PoslTools.int2str(weeks) + "\n";
+			string str =  "Golfers: players-" + players;
+			str += ", groups-" + groups;
+			str += ", weeks-" + weeks + "\n";
 			int[] config = solution.GetConfByCopy;
 			//vector<int>::iterator it = config.begin();
 			int it = 0;
@@ -47,7 +47,7 @@ namespace POSL.Benchmarks
 					for(int p = 0; p < players; p ++)
 					{
 						value = config[it++];
-						str += PoslTools.int2str(value) + "\t";
+						str += value + "\t";
 						it ++;
 					}
 					str += "\n";

@@ -19,8 +19,8 @@ namespace POSL.Data
 		//! (Property) Returns the found solution
 		public Solution GetFound{ get{ return found; } }
 
-		//! (Property) Returns the TAG
-		public override string Tag() { return "cd_DP"; }
+		//! From <ComputationData>
+		public override string Tag { get { return "cd_DP"; } }
 
 		//! (Property) Returns the packing ID (ID for the communication)
 		public string SolutionPackingID { get { return "658202" ;} } 
@@ -43,8 +43,8 @@ namespace POSL.Data
          */
 		public void update(int[] _current, int[] _found)
 		{
-			current.updateConfiguration(_current);
-			found.updateConfiguration(_found);
+			current.update(_current);
+			found.update(_found);
 		}
 
 		//! Updates the object from a buffer
@@ -60,8 +60,8 @@ namespace POSL.Data
 			//copy(pack + 2, pack + conf_size + 2, config1.begin());
 			PoslTools.copy (pack, 2 + conf_size, 2 * conf_size + 2, config2, 0);
 			//copy(pack + conf_size + 2, pack + 2 * conf_size + 2, config2.begin());
-			current.updateConfiguration(config1);
-			found.updateConfiguration(config2);
+			current.update(config1);
+			found.update(config2);
 		}
 
 		//! (Property) Returns whether both configurations are equals
@@ -88,7 +88,7 @@ namespace POSL.Data
 		//! From <ComputationData>
 		public override int comapareTo(ComputationData other, Func<ComputationData, int> criteria)
 		{
-			if(other.Tag() == Tag())
+			if(other.Tag == this.Tag)
 			{
 				int ranking_this = criteria(found);
 				int ranking_other = criteria(((DecisionPair)other).GetFound);

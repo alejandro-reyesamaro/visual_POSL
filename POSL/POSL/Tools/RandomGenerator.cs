@@ -2,6 +2,12 @@ using System;
 
 namespace POSL.Tools
 {
+	/*!
+	 * \class RandomGenerator 
+	 * \brief Class to represent a randome generator engine
+	 * \author Alejandro Reyes
+ 	 * \date 2017-05-17
+	 */
 	public class RandomGenerator
 	{
 		private Random rand;

@@ -14,6 +14,11 @@ namespace POSL.Data
 		private int min_value; 
 		private int max_value;
 
+		//! Main costructor
+		/*!
+            \param _min_value Minimum value of all domains (all are the same)
+            \param _max_value Maximum value of all domains (all are the same)
+         */
 		public UniformDomain(int _min_value, int _max_value)
 		{
 			min_value = _min_value;

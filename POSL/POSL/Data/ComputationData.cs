@@ -11,7 +11,12 @@ namespace POSL.Data
 	public abstract class ComputationData
 	{
 		//public abstract FactoryPacker BuildPacker();
-		public abstract string Tag();
+
+		//! Abstract property to return the TAG of the data
+		/*!
+            \return Data TAG
+         */
+		public abstract string Tag { get; }
 
 		//! Compare this object with other, given a function (criteria)
 		/*!

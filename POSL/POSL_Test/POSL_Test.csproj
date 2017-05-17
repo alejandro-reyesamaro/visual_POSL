@@ -36,8 +36,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigurationProvider.cs" />
-    <Compile Include="Test_Golfers.cs" />
-    <Compile Include="Test_Solution.cs" />
+    <Compile Include="UTst_POSL_Tools.cs" />
+    <Compile Include="UTst_Golfers.cs" />
+    <Compile Include="UTst_Solution.cs" />
+    <Compile Include="CaseResultSet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

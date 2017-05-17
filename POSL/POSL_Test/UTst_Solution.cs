@@ -5,7 +5,7 @@ using POSL.Data;
 namespace POSL_Test
 {
 	[TestFixture()]
-	public class Test_Solution
+	public class UTst_Solution
 	{
 		[Test()]
 		public void Test_GetConfiguration()

@@ -6,7 +6,7 @@ using POSL.Data;
 namespace POSL_Test
 {
 	[TestFixture()]
-	public class Test_Golfers
+	public class UTst_Golfers
 	{
 		[Test()]
 		public void Test_CostOfSolution ()
