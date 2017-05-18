@@ -192,6 +192,14 @@ namespace POSL_Test
 			PoslTools.fill (v, 3);
 			Assert.That(v, Is.EqualTo(new int[]{}));
 		}
+		[Test()]
+		public void Test_copy ()
+		{
+			int[] source = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+			int[] destination = new int[] { 8, 9, 10, 11, 12, 13, 14, 15 };
+			PoslTools.copy (source, 0, 7, destination, 1);
+			Assert.That(destination, Is.EqualTo(new int[]{8, 1, 2, 3, 4, 5, 6, 7}));
+		}
 	}
 }
 

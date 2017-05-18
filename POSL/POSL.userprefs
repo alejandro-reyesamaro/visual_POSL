@@ -1,16 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL_Test/Test_Solution.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Tools/PoslTools.cs">
     <Files>
-      <File FileName="POSL/Data/DecisionPair.cs" Line="39" Column="3" />
-      <File FileName="POSL/Benchmark/Golfers.cs" Line="19" Column="3" />
-      <File FileName="POSL/Data/ComputationData.cs" Line="1" Column="1" />
-      <File FileName="POSL/Data/Domain.cs" Line="6" Column="19" />
-      <File FileName="POSL/Data/UniformDomain.cs" Line="10" Column="22" />
-      <File FileName="POSL/Data/IDynamicNeighborhood.cs" Line="13" Column="3" />
-      <File FileName="POSL/Data/Neighborhood.cs" Line="6" Column="25" />
-      <File FileName="POSL/Data/Solution.cs" Line="1" Column="1" />
-      <File FileName="POSL_Test/Test_Solution.cs" Line="21" Column="1" />
+      <File FileName="POSL_Test/UTst_POSL_Tools.cs" Line="193" Column="17" />
+      <File FileName="POSL/Tools/PoslTools.cs" Line="190" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,14 +16,29 @@
             <Node name="Data" expanded="True">
               <Node name="data_strategy" expanded="True" />
             </Node>
+            <Node name="Tools" expanded="True">
+              <Node name="PoslTools.cs" selected="True" />
+            </Node>
           </Node>
-          <Node name="POSL_Test" expanded="True">
-            <Node name="Test_Solution.cs" selected="True" />
-          </Node>
+          <Node name="POSL_Test" expanded="True" />
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
+      <Pad Id="ClassPad">
         <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True">
+          <Node name="POSL_Test" expanded="True">
+            <Node name="POSL_Test" expanded="True">
+              <Node name="UTst_Golfers" expanded="True" />
+              <Node name="UTst_POSL_Tools" expanded="True" />
+              <Node name="UTst_Solution" expanded="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -177,20 +177,32 @@ namespace POSL.Tools
 				for (int i = 0; i < arr.Length; i++)
 					arr [i] = value;
 		}
-
-		public static void copy(int[] arr_source, int src_start, int src_end_out, int[] destination, int dest_start)
+		//! Copy some portion of the source array to the destination array
+		/*!
+			\param source The source array.
+			\param src_start The startin index of the source
+			\param src_end_out The ending index + 1
+			\param destination The destination array
+			\param dest_start The starting index of the destination
+		*/
+		public static void copy(int[] source, int src_start, int src_end_out, int[] destination, int dest_start)
 		{
+			if (source == null || destination == null || src_start < 0 || 
+				src_start > src_end_out || src_end_out > source.Length || 
+			    dest_start < 0 || dest_start > destination.Length)
+				p_throw ("invalid index configuration or null arrays", "PoslTools", "copy");
+			int sub_array_length = src_end_out - src_start;
+			if(destination.Length - dest_start < sub_array_length)
+				p_throw ("no enough space to copy", "PoslTools", "copy");
 			for (int i = src_start; i < src_end_out; i++)
-				destination [dest_start++] = arr_source [i];
+				destination [dest_start++] = source [i];
 		}
 
+		// NO TEST
 		public static void p_throw(string message, string class_name, string method_name)
 		{
 			throw new InvalidOperationException ("(PSOL Exception) " + message + " (" + class_name + "." + method_name + ")");
 		}
-
-
-		// NO TEST
 		public static int max(int[] v)
 		{
 			return v.Max();
