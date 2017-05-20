@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Tools/PoslTools.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Tools/ConnectionMatrix.cs">
     <Files>
-      <File FileName="POSL_Test/UTst_POSL_Tools.cs" Line="193" Column="17" />
-      <File FileName="POSL/Tools/PoslTools.cs" Line="190" Column="4" />
+      <File FileName="POSL_Test/UTst_POSL_Tools.cs" Line="201" Column="53" />
+      <File FileName="POSL/Tools/PoslTools.cs" Line="192" Column="8" />
+      <File FileName="POSL/Tools/ConnectionMatrix.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
               <Node name="data_strategy" expanded="True" />
             </Node>
             <Node name="Tools" expanded="True">
-              <Node name="PoslTools.cs" selected="True" />
+              <Node name="ConnectionMatrix.cs" selected="True" />
             </Node>
           </Node>
           <Node name="POSL_Test" expanded="True" />
@@ -30,11 +31,13 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="POSL_Test" expanded="True">
             <Node name="POSL_Test" expanded="True">
               <Node name="UTst_Golfers" expanded="True" />
-              <Node name="UTst_POSL_Tools" expanded="True" />
+              <Node name="UTst_POSL_Tools" expanded="True">
+                <Node name="Test_copy" selected="True" />
+              </Node>
               <Node name="UTst_Solution" expanded="True" />
             </Node>
           </Node>

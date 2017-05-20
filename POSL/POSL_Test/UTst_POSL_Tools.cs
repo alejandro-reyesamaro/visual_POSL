@@ -108,7 +108,7 @@ namespace POSL_Test
 		[Test()]
 		public void Test_sortAsc ()
 		{
-			int[] arr = new [] { 5, 7, 3};
+			int[] arr = new int[] { 5, 7, 3};
 			PoslTools.sortAscendent (arr);
 			Assert.That(arr, Is.EqualTo(new int[]{3, 5, 7}));
 		}
@@ -188,6 +188,7 @@ namespace POSL_Test
 		{
 			int[] arr = new int[3];
 			PoslTools.fill (arr, 3);
+			Assert.That(arr, Is.EqualTo(new int[]{3, 3, 3}));
 			int[] v = new int[0];
 			PoslTools.fill (v, 3);
 			Assert.That(v, Is.EqualTo(new int[]{}));

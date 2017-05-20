@@ -7,7 +7,7 @@ namespace POSL.Tools
 {
 	/*!
 	 * \class PoslTools 
-	 * \brief Static class containing auxiliar methods
+	 * \brief Static class containing auxiliary methods
 	 * \author Alejandro Reyes
  	 * \date 2017-05-17
 	 */
@@ -133,7 +133,7 @@ namespace POSL.Tools
 				if (Math.Abs(v1[i] - v2[i]) > distance) count++;
 			return count;
 		}
-		//!  Sum the first K elemnts of the vector v
+		//!  Sum the first K elements of the vector v
 		public static int sum(int[] v, int first_k_elements)
 		{
 			if(v.Length < first_k_elements)
@@ -180,7 +180,7 @@ namespace POSL.Tools
 		//! Copy some portion of the source array to the destination array
 		/*!
 			\param source The source array.
-			\param src_start The startin index of the source
+			\param src_start The starting index of the source
 			\param src_end_out The ending index + 1
 			\param destination The destination array
 			\param dest_start The starting index of the destination
