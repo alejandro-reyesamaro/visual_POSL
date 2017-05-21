@@ -29,7 +29,7 @@ namespace POSL.Benchmarks
 		private int TP { get{ return players * groups; } }
 		private int T { get{ return (groups * players * weeks); } }
 
-		//! Default constructor.
+		//! Main constructor.
 		/*!
             \param g Number of groups.
             \param p Number of players per gruop (total of players = _groups * _players).
@@ -70,7 +70,9 @@ namespace POSL.Benchmarks
 					for(int i = start_tournament; i < end_tournament - 1; i++)
 						for(int j = i + 1; j < end_tournament; j++)
 					{
-						current_cost += cc_occurrences.add_connection(configuration[i], configuration[j], true);
+						cc_occurrences.add_connection(configuration[i], configuration[j]);
+						current_cost += 2;
+						//current_cost += cc_occurrences.add_connection(configuration[i], configuration[j], true);
 						//current_cost += cc_occurrences.projected_cost(configuration[i], configuration[j]);
 					}
 				}
@@ -110,8 +112,17 @@ namespace POSL.Benchmarks
 						partner_current_group = configuration[j];
 						partner_new_group = new_solution[j];
 
-						cost += cc_occurrences.remove_connection(current_player_at_pos, partner_current_group, updating);
-						cost += cc_occurrences.add_connection(new_value, partner_new_group, updating);
+						if (updating) {
+							cc_occurrences.remove_connection (current_player_at_pos, partner_current_group);
+							cost += (cc_occurrences.are_connected (current_player_at_pos, partner_current_group)) ? - 2 : 0;
+						} else 
+							cost += (cc_occurrences.would_be_disconnected (current_player_at_pos, partner_current_group)) ? - 2 : 0;
+
+						//cost += cc_occurrences.remove_connection(current_player_at_pos, partner_current_group, updating);
+						//cost += cc_occurrences.add_connection(new_value, partner_new_group, updating);
+						if(updating)
+							cc_occurrences.add_connection(new_value, partner_new_group);
+						cost += 2;
 					}
 				}
 			}
@@ -161,7 +172,7 @@ namespace POSL.Benchmarks
          */
 		public int costOnVariable(int variable_index)
 		{
-			return cc_occurrences.ranking_cost_of_variable(variable_index);
+			return cc_occurrences.ranking_cost_of_index(variable_index);
 		}
 
 		//! Selects the worst variable w.r.t. the projected cost
