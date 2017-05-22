@@ -25,13 +25,26 @@ namespace POSL.Tools
 				connections[i] = new int[i];
 		}
 
-		//! Default constructor.
+		//! Main constructor: receives the number of connections
 		/*!
             \param n Number of objects to "connect"
          */
 		public ConnectionMatrix(int n)
 		{
 			buildConnectios (n);
+		}
+
+		//! Constructor: receives the connection matrix
+		/*!
+            \param connection_matrix The connection matrix
+         */
+		public ConnectionMatrix(int[][] connection_matrix)
+		{
+			int n = connection_matrix.GetLength (0);
+			for(int i = 0; i < n ; i++)
+				if(connection_matrix[i].Length != i)
+					PoslTools.p_throw ("not valid connection matrix", "ConnectionMatrix", "CONSTRUCTOR");
+			connections = connection_matrix;
 		}
 
 		//! Inserts a new connection between indexes a and b
@@ -42,7 +55,7 @@ namespace POSL.Tools
          */
 		public void add_connection(int a, int b)
 		{
-			if (a < 0 || a >= N || b < 0 || b >= N)
+			if (!are_one_base_indexes(a,b))
 				PoslTools.p_throw ("not valid indexes", "ConnectionMatrix", "add_connection");
 			if(a == b) return;
 			int pa = Math.Max(a, b)-1;
@@ -58,7 +71,7 @@ namespace POSL.Tools
          */
 		public bool are_connected(int a, int b)
 		{
-			if (a < 0 || a >= N || b < 0 || b >= N)
+			if (!are_one_base_indexes(a,b))
 				PoslTools.p_throw ("not valid indexes", "ConnectionMatrix", "are_connected");
 			if(a == b) return true;
 			int pa = Math.Max(a, b)-1;
@@ -74,7 +87,7 @@ namespace POSL.Tools
          */
 		public bool would_be_disconnected(int a, int b)
 		{
-			if (a < 0 || a >= N || b < 0 || b >= N)
+			if (!are_one_base_indexes(a,b))
 				PoslTools.p_throw ("not valid indexes", "ConnectionMatrix", "would_be_disconected");
 			if(a == b) return false;
 			int pa = Math.Max(a, b)-1;
@@ -90,7 +103,7 @@ namespace POSL.Tools
          */
 		public void remove_connection(int a, int b)
 		{
-			if (a < 0 || a >= N || b < 0 || b >= N)
+			if (!are_one_base_indexes(a,b))
 				PoslTools.p_throw ("not valid indexes", "ConnectionMatrix", "remove_connection");
 			if(a == b) return;
 			int pa = Math.Max(a, b)-1;
@@ -146,6 +159,43 @@ namespace POSL.Tools
 		{
 			for(int i = 0; i < connections.Length ; i++)
 				PoslTools.fill(connections[i], 0);
+		}
+
+		//! From <Object>
+		public override bool Equals(object other)
+		{
+			if (other is ConnectionMatrix) {
+				ConnectionMatrix otherCM = (ConnectionMatrix)other;
+				int myN = connections.GetLength (0);
+				int otherN = otherCM.connections.GetLength (0);
+				if (myN != otherN)
+					return false;
+				int myM, otherM;
+				for(int i = 0; i < myN ; i++)
+				{
+					myM = connections [i].Length;
+					otherM = otherCM.connections[i].Length;
+					if (myM != otherM)
+						return false;
+					for (int j = 0; j < myM; j++)
+						if (connections [i] [j] != otherCM.connections [i] [j])
+							return false;
+				}
+				return true;
+			}
+			else 
+				return false;
+		}
+
+		//! From <Object>
+		public override int GetHashCode ()
+		{
+			return base.GetHashCode ();
+		}
+
+		private bool are_one_base_indexes(int a, int b)
+		{
+			return a > 0 && a <= N && b > 0 && b <= N;
 		}
 	}
 }

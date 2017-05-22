@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="POSL/Tools/ConnectionMatrix.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="POSL_Test/UTst_ConnectionMatrix.cs">
     <Files>
-      <File FileName="POSL_Test/UTst_POSL_Tools.cs" Line="201" Column="53" />
-      <File FileName="POSL/Tools/PoslTools.cs" Line="192" Column="8" />
-      <File FileName="POSL/Tools/ConnectionMatrix.cs" Line="1" Column="1" />
+      <File FileName="POSL_Test/UTst_POSL_Tools.cs" Line="141" Column="1" />
+      <File FileName="POSL/Tools/ConnectionMatrix.cs" Line="58" Column="34" />
+      <File FileName="POSL/Benchmark/cost_strategy/GolfersRelativeCostStrategy.cs" Line="175" Column="47" />
+      <File FileName="POSL/Benchmark/cost_strategy/GolfersLongIntCostStrategy.cs" Line="15" Column="47" />
+      <File FileName="POSL_Test/UTst_ConnectionMatrix.cs" Line="26" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +19,11 @@
             <Node name="Data" expanded="True">
               <Node name="data_strategy" expanded="True" />
             </Node>
-            <Node name="Tools" expanded="True">
-              <Node name="ConnectionMatrix.cs" selected="True" />
-            </Node>
+            <Node name="Tools" expanded="True" />
           </Node>
-          <Node name="POSL_Test" expanded="True" />
+          <Node name="POSL_Test" expanded="True">
+            <Node name="UTst_ConnectionMatrix.cs" selected="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -34,11 +36,7 @@
         <State expanded="True">
           <Node name="POSL_Test" expanded="True">
             <Node name="POSL_Test" expanded="True">
-              <Node name="UTst_Golfers" expanded="True" />
-              <Node name="UTst_POSL_Tools" expanded="True">
-                <Node name="Test_copy" selected="True" />
-              </Node>
-              <Node name="UTst_Solution" expanded="True" />
+              <Node name="UTst_POSL_Tools" selected="True" />
             </Node>
           </Node>
         </State>

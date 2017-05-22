@@ -51,42 +51,30 @@ namespace POSL_Test
 			Assert.That(PoslTools.mismatches(v123, v113), Is.EqualTo(1));
 			Assert.That(PoslTools.mismatches(v123, v123), Is.EqualTo(0));
 			Assert.That(PoslTools.mismatches(v123, v456), Is.EqualTo(3));
-			bool exception = false;
 			try {
 				PoslTools.mismatches(v123, v1);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 
 			Assert.That(PoslTools.mismatches(v123, v113, 0), Is.EqualTo(1));
 			Assert.That(PoslTools.mismatches(v123, v458, 4), Is.EqualTo(1));
 			Assert.That(PoslTools.mismatches(v123, v124, 0), Is.EqualTo(1));
-			exception = false;
 			try {
 				PoslTools.mismatches(v123, v1, 1);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 
 			Assert.That(PoslTools.mismatches(v123, v113, 2, 0), Is.EqualTo(1));
 			Assert.That(PoslTools.mismatches(v123, v458, 2, 4), Is.EqualTo(0));
 			Assert.That(PoslTools.mismatches(v123, v124, 2, 0), Is.EqualTo(0));
-			exception = false;
 			try {
 				PoslTools.mismatches(v123, v1, 1, 0);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
-			exception = false;
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 			try {
 				PoslTools.mismatches(v123, v123, 4, 0);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 		}
 		[Test()]
 		public void Test_generateMonotonyN ()
@@ -122,46 +110,34 @@ namespace POSL_Test
 			// Norm 1
 			Assert.That(PoslTools.norm1(v123, v123), Is.EqualTo(0));
 			Assert.That(PoslTools.norm1(v235, v111), Is.EqualTo(7));
-			bool exception = false;
 			try {
 				PoslTools.norm1(v123, v12);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 			// Norm 2
 			Assert.That(PoslTools.norm2(v123, v123), Is.EqualTo(0));
 			Assert.That(PoslTools.norm2(v235, v111), Is.EqualTo((float)Math.Sqrt(21)));
-			exception = false;
 			try {
 				PoslTools.norm2(v123, v12);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 			// Norm Inf
 			Assert.That(PoslTools.norm8(v123, v123), Is.EqualTo(0));
 			Assert.That(PoslTools.norm8(v235, v111), Is.EqualTo(4));
-			exception = false;
 			try {
 				PoslTools.norm8(v123, v12);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException) {}
 		}
 		[Test()]
 		public void Test_sum ()
 		{
 			int[] v123 = new int[] { 1, 2, 3, 4};
 			Assert.That(PoslTools.sum(v123, 3), Is.EqualTo(6));
-			bool exception = false;
 			try {
 				PoslTools.sum(v123, 5);
-			} catch (InvalidOperationException) {
-				exception = true;
-			}
-			Assert.That(exception, Is.EqualTo(true));
+				Assert.Fail();
+			} catch (InvalidOperationException){}
 		}
 		[Test()]
 		public void Test_eq ()
